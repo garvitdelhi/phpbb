@@ -35,7 +35,7 @@ function phpbb_require_updated($path, $optional = false)
 	{
 		require($new_path);
 	}
-	else if (!$optional || file_exists($old_path))
+	else if (!$optional && file_exists($old_path))
 	{
 		require($old_path);
 	}
